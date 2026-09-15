@@ -1,4 +1,4 @@
-# Mini-SIEM — Sysmon-Based Detection Pipeline
+# SIEMs Fine... — Sysmon-Based Detection Pipeline
 
 A self-built mini-SIEM for my personal machine, built to understand how 
 log pipelines, normalization, and detection engineering actually work 
@@ -19,7 +19,7 @@ surfaces searchable events + alerts through a dashboard.
 Sysmon → Winlogbeat (NDJSON) → Log Reader → Parser → Normalizer → SQLite (events + alerts) → Detection Rules → Flask Dashboard
 
 
-![Architecture Diagram](diagram/architecture.png)
+![Architecture Diagram](images/siems-fine-architecture.png)
 
 ---
 
@@ -38,13 +38,13 @@ Sysmon → Winlogbeat (NDJSON) → Log Reader → Parser → Normalizer → SQLi
 ## Screenshots
 
 **Dashboard — live event & alert overview**
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](images/dashboard.png)images/events.png
 
 **Events — searchable, filterable log table**
-![Events](screenshots/events.png)
+![Events](images/events.png)
 
 **Alerts — triggered detections by severity**
-![Alerts](screenshots/alerts.png)
+![Alerts](images/alerts.png)
 
 ---
 
