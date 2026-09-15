@@ -19,7 +19,7 @@ surfaces searchable events + alerts through a dashboard.
 Sysmon → Winlogbeat (NDJSON) → Log Reader → Parser → Normalizer → SQLite (events + alerts) → Detection Rules → Flask Dashboard
 
 
-![Architecture Diagram](images/siems-fine-architecture.png)
+<img src="images/siems-fine-architecture.png" alt="Architecture Diagram" width="700">
 
 ---
 
@@ -38,7 +38,7 @@ Sysmon → Winlogbeat (NDJSON) → Log Reader → Parser → Normalizer → SQLi
 ## Screenshots
 
 **Dashboard — live event & alert overview**
-![Dashboard](images/dashboard.png)images/events.png
+![Dashboard](images/dashboard.png)
 
 **Events — searchable, filterable log table**
 ![Events](images/events.png)
