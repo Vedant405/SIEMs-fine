@@ -59,13 +59,7 @@ Most of the real learning came from things breaking:
   to flag "abnormal" — the same tuning work a SOC analyst does constantly 
   to keep signal-to-noise usable.
 
-- **Log rotation edge case** — my log reader picked the "newest" file by 
-  sorting filenames alphabetically, which silently broke because 
-  Winlogbeat's rotation sequence numbers aren't zero-padded (`...-9` sorts 
-  after `...-24` alphabetically). This caused real alerts to go undetected 
-  for hours before I traced it — a good reminder that pipeline reliability 
-  issues can look identical to "no threats found," which is a dangerous 
-  failure mode for any monitoring system.
+- **Alert fatigue** — Tuning the DNS rule taught me that a detection with no false-positive filtering isn't actually useful — it's just noise with extra steps. A SOC analyst drowning in low-fidelity alerts will start ignoring the queue entirely, which is worse than not alerting at all. Getting signal-to-noise right is the job, not a side task.
 
 - Building the normalization layer from scratch gave me a much clearer 
   picture of *why* correlation across log sources is hard, and what a 
